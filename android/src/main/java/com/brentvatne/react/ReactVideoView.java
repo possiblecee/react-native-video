@@ -112,7 +112,7 @@ public class ReactVideoView extends ScalableVideoView implements MediaPlayer.OnP
                     event.putDouble(EVENT_PROP_PLAYABLE_DURATION, mVideoBufferedDuration / 1000.0); //TODO:mBufferUpdateRunnable
                     mEventEmitter.receiveEvent(getId(), Events.EVENT_PROGRESS.toString(), event);
                 }
-                mProgressUpdateHandler.postDelayed(mProgressUpdateRunnable, 250);
+                mProgressUpdateHandler.postDelayed(mProgressUpdateRunnable, 100);
             }
         };
         mProgressUpdateHandler.post(mProgressUpdateRunnable);
